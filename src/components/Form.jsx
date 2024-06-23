@@ -7,8 +7,6 @@ import ProjectDetails from "./ProjectDetails";
 import Skills from "./Skills";
 import ExtraDetails from "./ExtraDetails";
 import { Container } from "react-bootstrap";
-import axios from "axios";
-import { saveAs } from "file-saver";
 
 const Form = () => {
   const [formData, setFormData] = useState({
@@ -47,12 +45,12 @@ const Form = () => {
   return (
     <Container style={{ maxWidth: "60%", margin: "0 auto" }} fluid>
       <Wizard>
-        <PersonalDetails formData={formData} setFormData={setFormData} />
-        <EducationDetails formData={formData} setFormData={setFormData} />
-        <ExperienceDetails formData={formData} setFormData={setFormData} />
-        <ProjectDetails formData={formData} setFormData={setFormData} />
-        <Skills formData={formData} setFormData={setFormData} />
-        <ExtraDetails formData={formData} setFormData={setFormData} />
+        <PersonalDetails className="h-40" formData={formData} setFormData={setFormData} />
+        <EducationDetails className="h-40" formData={formData} setFormData={setFormData} />
+        <ExperienceDetails className="h-40" formData={formData} setFormData={setFormData} />
+        <ProjectDetails className="h-40" formData={formData} setFormData={setFormData} />
+        <Skills className="h-40" formData={formData} setFormData={setFormData} />
+        <ExtraDetails className="h-40" formData={formData} setFormData={setFormData} />
       </Wizard>
     </Container>
   );

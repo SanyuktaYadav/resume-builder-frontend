@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <div className="form">
-        <h1>Let's Generate your resume!</h1>
+        <h1 className="m-4">Let's Generate your resume!</h1>
         <Form />
       </div>
     </div>
