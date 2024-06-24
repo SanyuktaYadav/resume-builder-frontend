@@ -15,13 +15,16 @@ const ExtraDetails = ({ formData, setFormData }) => {
   const handleSubmit = () => {
     axios
       .post(
-        "https://resume-builder-backend-iota.vercel.app/create-pdf",
+        "https://resume-builder-backend-iota.vercel.app/api/create-pdf",
         formData
       )
       .then(() =>
-        axios.get("https://resume-builder-backend-iota.vercel.app/fetch-pdf", {
-          responseType: "blob",
-        })
+        axios.get(
+          "https://resume-builder-backend-iota.vercel.app/api/fetch-pdf",
+          {
+            responseType: "blob",
+          }
+        )
       )
       .then((res) => {
         const pdfBlob = new Blob([res.data], { type: "application/pdf" });
